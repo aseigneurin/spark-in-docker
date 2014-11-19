@@ -2,7 +2,7 @@ Dockerfiles and scripts to run Apache Spark on Docker:
 
 - a DNS server
 - a Spark master
-- 1+ Spark slaves
+- 1+ Spark workers
 
 Start the DNS server:
 
@@ -24,9 +24,9 @@ Start the Spark master (reusing the IP from the DNS server):
     ===> IP of the Master: 172.17.0.47
     ...
 
-Start one or more Spark slaves (still reusing the IP from the DNS server):
+Start one or more Spark workers (still reusing the IP from the DNS server):
 
-    $ cd slave
+    $ cd worker
     $ docker build .
     ...
     Successfully built 61f5df841bbc
