@@ -20,7 +20,7 @@ Start the Spark master (reusing the IP from the DNS server):
     $ docker build .
     ...
     Successfully built c2d6e585107c
-    $ docker run --name spark_master --rm -ti -p 8080:8080 --dns 172.17.0.60 --volumes-from=nameserver c2d6e585107c
+    $ docker run --name master --hostname master --rm -ti -p 8080:8080 --dns 172.17.0.60 --volumes-from=nameserver c2d6e585107c
     ===> IP of the Master: 172.17.0.47
     ...
 
