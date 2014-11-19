@@ -1,8 +1,9 @@
-Dockerfiles and scripts to run Apache Spark on Docker:
+Dockerfiles and scripts to run [Spark](http://spark.apache.org) and [HDFS](http://hadoop.apache.org/docs/current/index.html) on Docker:
 
 - a DNS server
 - a Spark master
-- 1+ Spark workers
+- a HDFS namenode
+- 1+ nodes combining a Spark worker and a HDFS datanode
 
 Start the DNS server:
 
@@ -34,7 +35,7 @@ Start the Spark master (reusing the IP from the DNS server):
     ===> IP of the Master: 172.17.0.47
     ...
 
-Start one or more Spark workers (still reusing the IP from the DNS server):
+Start one or more Spark worker / HDFS datanode (still reusing the IP from the DNS server):
 
     $ cd worker
     $ docker build .
