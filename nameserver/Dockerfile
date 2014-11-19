@@ -17,6 +17,6 @@ EXPOSE 53
 
 VOLUME /opt/docker/dnsmasq.d
 
-ADD files /root/scripts
+ADD scripts /root/scripts
 
 CMD /root/scripts/run_dnsmasq.sh

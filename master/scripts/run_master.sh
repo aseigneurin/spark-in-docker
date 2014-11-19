@@ -4,6 +4,9 @@ IP=$(ip -o -4 addr list eth0 | perl -n -e 'if (m{inet\s([\d\.]+)\/\d+\s}xms) { p
 
 echo "===> IP of the Master: $IP"
 echo
+echo "   >   Spark Master UI: http://$IP:8080"
+echo "   >   Spark Master URL: spark://master:7077"
+echo
 
 echo "host-record=master,$IP" > /opt/docker/dnsmasq.d/0host_master
 

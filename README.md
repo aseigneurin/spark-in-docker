@@ -14,6 +14,16 @@ Start the DNS server:
     ===> IP of the Nameserver: 172.17.0.60
     ...
 
+Start the HDFS Namenode:
+
+    $ cd hdfs-namenode
+    $ docker build .
+    ...
+    Successfully built 62046786dde2
+    $ docker run --name namenode --hostname namenode --rm -ti -p 50070:50070 --dns 172.17.0.60 --volumes-from=nameserver 62046786dde2
+    ===> IP of the Nameserver: 172.17.0.60
+    ...
+
 Start the Spark master (reusing the IP from the DNS server):
 
     $ cd master
